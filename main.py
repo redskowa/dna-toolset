@@ -1,11 +1,9 @@
 # DNA Toolset/Code testing file
-from DNAToolkit import *
-import random
 
-randDNAstr = ''.join([random.choice(Nucleotides)
-                    for nuc in range(50)])
+from bio_seq import bio_seq
 
-DNAStr = validateSeq(randDNAstr)
+test_dna = bio_seq("ATTGGCAGGTACGTAGGC", "DNA", "Test Label")
 
-print(DNAStr)
-print(countNucFrequency(DNAStr))
+print(test_dna.get_seq_info())
+print(test_dna.get_seq_biotype())
+
